@@ -4,7 +4,8 @@ import AppReducer from './AppReducer'
 // initial state
 
 const initialState = {
-    data : []
+    data : [],
+    loading:false
     
 }
 
@@ -26,10 +27,19 @@ export const GlobalProvider =({children}) =>{
             payload: transaction
         })
     }
+    const isLoading = (status) =>{
+        dispatch({
+            type:"loading",
+            payload: status
+        })
+    }
+
     return(
         <GlobalContext.Provider value={{
             recipes : state.data,
-            addTransaction
+            addTransaction,
+            loading : state.loading,
+            isLoading
         }}>
             {children}
         </GlobalContext.Provider>

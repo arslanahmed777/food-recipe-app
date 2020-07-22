@@ -6,6 +6,11 @@ export default (state,action) =>{
                 ...state,
                 data:action.payload,...state.data 
             }
+        case "loading":
+            return{
+                ...state,
+                loading:action.payload
+            }
         default:
             return state;
     }
