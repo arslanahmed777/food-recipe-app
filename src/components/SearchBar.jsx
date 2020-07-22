@@ -35,6 +35,7 @@ export const SearchBar = () => {
                     <div className="col-12 col-md-10 col-lg-8">
 
                         <p  className="h1 text-center text-warning">Yummly</p>
+                        <p>By Arslan Ahmed Shaad</p>
                         <form className="card card-sm" onSubmit={handler}>
                             <div className="card-body row no-gutters align-items-center">
                                 <div className="col-auto">
